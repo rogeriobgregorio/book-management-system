@@ -1,0 +1,10 @@
+INSERT INTO tb_books (title, author, description, price) VALUES ('Harry Potter and the Sorcerer''s Stone', 'J.K. Rowling', 'The magical adventures of a young wizard.', 29.99);
+INSERT INTO tb_books (title, author, description, price) VALUES ('1984', 'George Orwell', 'A dystopian novel set in a totalitarian society.', 19.99);
+INSERT INTO tb_books (title, author, description, price) VALUES ('To Kill a Mockingbird', 'Harper Lee', 'A story of racial injustice in the American South.', 12.50);
+INSERT INTO tb_books (title, author, description, price) VALUES ('The Lord of the Rings', 'J.R.R. Tolkien', 'A fantasy adventure in Middle-earth.', 17.95);
+INSERT INTO tb_books (title, author, description, price) VALUES ('Pride and Prejudice', 'Jane Austen', 'Romantic entanglements in Regency-era England.', 14.99);
+INSERT INTO tb_books (title, author, description, price) VALUES ('The Great Gatsby', 'F. Scott Fitzgerald', 'The Jazz Age and the American Dream.', 9.99);
+INSERT INTO tb_books (title, author, description, price) VALUES ('Adventures of Huckleberry Finn', 'Mark Twain', 'The adventures of a young boy along the Mississippi River.', 8.75);
+INSERT INTO tb_books (title, author, description, price) VALUES ('One Hundred Years of Solitude', 'Gabriel Garcia Marquez', 'A multi-generational story of the Buendia family.', 11.25);
+INSERT INTO tb_books (title, author, description, price) VALUES ('War and Peace', 'Leo Tolstoy', 'An epic novel set during the Napoleonic era in Russia.', 16.50);
+INSERT INTO tb_books (title, author, description, price) VALUES ('Murder on the Orient Express', 'Agatha Christie', 'A famous detective investigates a murder on the Orient Express.', 13.49);
