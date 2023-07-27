@@ -1,10 +1,10 @@
 package com.rogeriogregorio.bookmanagementsystem.dto;
 
-import com.rogeriogregorio.bookmanagementsystem.entities.Book;
-import jakarta.persistence.Column;
+import com.rogeriogregorio.bookmanagementsystem.entities.BookEntity;
 
 public class BookDTO {
 
+    private Long id;
     private String title;
     private String author;
     private String description;
@@ -13,11 +13,16 @@ public class BookDTO {
     public BookDTO() {
     }
 
-    public BookDTO(Book entity) {
+    public BookDTO(BookEntity entity) {
+        this.id = entity.getId();
         this.title = entity.getTitle();
         this.author = entity.getAuthor();
         this.description = entity.getDescription();
         this.price = entity.getPrice();
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public String getTitle() {

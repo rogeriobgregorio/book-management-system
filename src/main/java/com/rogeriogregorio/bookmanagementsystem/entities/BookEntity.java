@@ -6,7 +6,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "tb_books")
-public class Book {
+public class BookEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,17 +19,17 @@ public class Book {
     @Column(name = "author")
     private String author;
 
-    @Column(name = "description",columnDefinition = "TEXT")
+    @Column(name = "description", columnDefinition = "TEXT")
     private String description;
 
     @Column(name = "price")
     private Double price;
 
-    public Book() {
+    public BookEntity() {
     }
 
-    public Book(String title, String author,
-                String description, Double price) {
+    public BookEntity(String title, String author,
+                      String description, Double price) {
         this.title = title;
         this.author = author;
         this.description = description;
@@ -80,7 +80,7 @@ public class Book {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Book that = (Book) o;
+        BookEntity that = (BookEntity) o;
         return Objects.equals(id, that.id);
     }
 
