@@ -84,7 +84,7 @@ public class BookService {
     public List<BookDTO> findBookByTitleOrAuthor(String titleOrAuthor) {
 
         String searchTerm = "%" + titleOrAuthor + "%";
-        
+
         return bookRepository.findByTitleOrAuthor(searchTerm)
                 .stream()
                 .map(BookDTO::new)
