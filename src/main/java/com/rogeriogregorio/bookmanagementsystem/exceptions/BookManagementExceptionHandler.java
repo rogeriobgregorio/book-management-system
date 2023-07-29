@@ -5,26 +5,85 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+import java.time.Instant;
+
 @ControllerAdvice
 public class BookManagementExceptionHandler {
 
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<Object> genericErrorHandler(Exception ex) {
-        Erro detalhe = new Erro()
-            .code(HttpStatus.INTERNAL_SERVER_ERROR.value())
-            .message(ex.getMessage())
-            .detail(String.format("A exceção lançada foi: ", ex.getMessage()));
+    public ResponseEntity<Object> genericError(Exception ex) {
 
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(detalhe);
+        StandardError genericError = new StandardError();
+
+        genericError.setTimeStamp(Instant.now());
+        genericError.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+        genericError.setError("Internal server error.");
+        genericError.setMessage(ex.getMessage());
+
+        return ResponseEntity
+                .status(HttpStatus.INTERNAL_SERVER_ERROR)
+                .body(genericError);
     }
 
-    @ExceptionHandler(InvalidParametersException.class)
-    public ResponseEntity<Erro> InvalidParametersExceptionHandler(InvalidParametersException ex) {
-        Erro detalhe = new Erro()
-                .code(HttpStatus.INTERNAL_SERVER_ERROR.value())
-                .message(ex.getMessage())
-                .detail(String.format("A exceção lançada foi: ", ex.getMessage()));
+    @ExceptionHandler(BookNotFoundException.class)
+    public ResponseEntity<StandardError> booksNotFoundException(BookNotFoundException ex) {
 
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(detalhe);
+        StandardError error = new StandardError();
+
+        error.setTimeStamp(Instant.now());
+        error.setStatus(HttpStatus.NOT_FOUND.value());
+        error.setError("Books not found.");
+        error.setMessage(ex.getMessage());
+
+        return ResponseEntity
+                .status(HttpStatus.NOT_FOUND)
+                .body(error);
     }
+
+    @ExceptionHandler(BookCreationException.class)
+    public ResponseEntity<StandardError> bookCreationException(BookCreationException ex) {
+
+        StandardError error = new StandardError();
+
+        error.setTimeStamp(Instant.now());
+        error.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+        error.setError("Error creating book.");
+        error.setMessage(ex.getMessage());
+
+        return ResponseEntity
+                .status(HttpStatus.INTERNAL_SERVER_ERROR)
+                .body(error);
+    }
+
+    @ExceptionHandler(BookAlreadyExistsException.class)
+    public ResponseEntity<StandardError> bookAlreadyExistsException(BookAlreadyExistsException ex) {
+
+        StandardError error = new StandardError();
+
+        error.setTimeStamp(Instant.now());
+        error.setStatus(HttpStatus.BAD_REQUEST.value());
+        error.setError("Book already exists.");
+        error.setMessage(ex.getMessage());
+
+        return ResponseEntity
+                .status(HttpStatus.BAD_REQUEST)
+                .body(error);
+    }
+
+    @ExceptionHandler(BookUpdateException.class)
+    public ResponseEntity<StandardError> bookUpdateException(BookUpdateException ex) {
+
+        StandardError error = new StandardError();
+
+        error.setTimeStamp(Instant.now());
+        error.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+        error.setError("Error updating book");
+        error.setMessage(ex.getMessage());
+
+        return ResponseEntity
+                .status(HttpStatus.INTERNAL_SERVER_ERROR)
+                .body(error);
+    }
+
+
 }
