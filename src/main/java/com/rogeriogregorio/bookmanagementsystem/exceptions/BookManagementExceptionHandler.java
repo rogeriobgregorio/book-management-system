@@ -84,6 +84,4 @@ public class BookManagementExceptionHandler {
                 .status(HttpStatus.INTERNAL_SERVER_ERROR)
                 .body(error);
     }
-
-
 }
