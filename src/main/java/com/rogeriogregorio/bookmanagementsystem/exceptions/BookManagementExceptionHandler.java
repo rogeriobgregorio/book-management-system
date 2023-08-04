@@ -31,12 +31,12 @@ public class BookManagementExceptionHandler {
         StandardError error = new StandardError();
 
         error.setTimeStamp(Instant.now());
-        error.setStatus(HttpStatus.NOT_FOUND.value());
+        error.setStatus(HttpStatus.NO_CONTENT.value());
         error.setError("Books not found.");
         error.setMessage(ex.getMessage());
 
         return ResponseEntity
-                .status(HttpStatus.NOT_FOUND)
+                .status(HttpStatus.NO_CONTENT)
                 .body(error);
     }
 
