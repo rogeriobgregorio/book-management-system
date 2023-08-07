@@ -32,7 +32,7 @@ public class BookManagementExceptionHandler {
 
         error.setTimeStamp(Instant.now());
         error.setStatus(HttpStatus.NOT_FOUND.value());
-        error.setError("Books not found.");
+        error.setError("Book not found.");
         error.setMessage(ex.getMessage());
 
         return ResponseEntity
