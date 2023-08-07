@@ -7,10 +7,10 @@ import java.util.List;
 
 public interface BookService {
 
-    List<BookDTO> findAllBooks();
-    BookDTO findBookById(Long id);
-    List<BookDTO> createBook(BookEntity bookEntity);
-    List<BookDTO> updateBook(BookEntity bookEntity);
-    List<BookDTO> deleteBook(Long id);
-    List<BookDTO> findBookByTitleOrAuthor(String titleOrAuthor);
+    public List<BookDTO> findAllBooks();
+    public BookDTO findBookById(Long id);
+    public List<BookDTO> createBook(BookEntity bookEntity);
+    public List<BookDTO> updateBook(BookEntity bookEntity);
+    public List<BookDTO> deleteBook(Long id);
+    public List<BookDTO> findBookByTitleOrAuthor(String titleOrAuthor);
 }

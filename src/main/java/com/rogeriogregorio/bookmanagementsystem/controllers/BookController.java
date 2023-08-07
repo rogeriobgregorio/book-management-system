@@ -14,14 +14,14 @@ import java.util.List;
 public class BookController {
 
     @Autowired
-    BookService bookService;
+    BookService BookService;
 
     @GetMapping
     public ResponseEntity<List<BookDTO>> findAllBooks() {
 
         return ResponseEntity
                 .ok()
-                .body(bookService.findAllBooks());
+                .body(BookService.findAllBooks());
     }
 
     @GetMapping(value = "/{id}")
@@ -29,7 +29,7 @@ public class BookController {
 
         return ResponseEntity
                 .ok()
-                .body(bookService.findBookById(id));
+                .body(BookService.findBookById(id));
     }
 
     @PostMapping
@@ -37,7 +37,7 @@ public class BookController {
 
         return ResponseEntity
                 .ok()
-                .body(bookService.createBook(bookEntity));
+                .body(BookService.createBook(bookEntity));
     }
 
     @PutMapping
@@ -45,7 +45,7 @@ public class BookController {
 
         return ResponseEntity
                 .ok()
-                .body(bookService.updateBook(bookEntity));
+                .body(BookService.updateBook(bookEntity));
     }
 
     @DeleteMapping(value = "/{id}")
@@ -53,7 +53,7 @@ public class BookController {
 
         return ResponseEntity
                 .ok()
-                .body(bookService.deleteBook(id));
+                .body(BookService.deleteBook(id));
     }
 
     @GetMapping(value = "/search")
@@ -61,6 +61,6 @@ public class BookController {
 
         return ResponseEntity
                 .ok()
-                .body(bookService.findBookByTitleOrAuthor(titleOrAuthor));
+                .body(BookService.findBookByTitleOrAuthor(titleOrAuthor));
     }
 }

@@ -2,7 +2,6 @@ package com.rogeriogregorio.bookmanagementsystem.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rogeriogregorio.bookmanagementsystem.controllers.BookController;
-import com.rogeriogregorio.bookmanagementsystem.entities.BookEntity;
 import com.rogeriogregorio.bookmanagementsystem.mock.BookMock;
 import com.rogeriogregorio.bookmanagementsystem.repositories.BookRepository;
 import com.rogeriogregorio.bookmanagementsystem.services.BookService;
@@ -20,9 +19,6 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-import java.util.List;
-
-import static org.mockito.ArgumentMatchers.isA;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 

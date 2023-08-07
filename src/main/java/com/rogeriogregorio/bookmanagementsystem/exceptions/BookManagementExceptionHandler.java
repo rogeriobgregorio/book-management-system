@@ -26,17 +26,17 @@ public class BookManagementExceptionHandler {
     }
 
     @ExceptionHandler(BookNotFoundException.class)
-    public ResponseEntity<StandardError> booksNotFoundException(BookNotFoundException ex) {
+    public ResponseEntity<StandardError> bookNotFoundException(BookNotFoundException ex) {
 
         StandardError error = new StandardError();
 
         error.setTimeStamp(Instant.now());
-        error.setStatus(HttpStatus.NO_CONTENT.value());
+        error.setStatus(HttpStatus.NOT_FOUND.value());
         error.setError("Books not found.");
         error.setMessage(ex.getMessage());
 
         return ResponseEntity
-                .status(HttpStatus.NO_CONTENT)
+                .status(HttpStatus.NOT_FOUND)
                 .body(error);
     }
 
