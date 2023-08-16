@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import jakarta.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -14,7 +15,7 @@ import java.util.List;
 public class BookController {
 
     @Autowired
-    BookService BookService;
+    private BookService BookService;
 
     @GetMapping
     public ResponseEntity<List<BookDTO>> findAllBooks() {
@@ -33,7 +34,7 @@ public class BookController {
     }
 
     @PostMapping
-    public ResponseEntity<List<BookDTO>> createBook(@RequestBody BookEntity bookEntity) {
+    public ResponseEntity<List<BookDTO>> createBook(@RequestBody @Valid BookEntity bookEntity) {
 
         return ResponseEntity
                 .ok()
@@ -41,7 +42,7 @@ public class BookController {
     }
 
     @PutMapping
-    public ResponseEntity<List<BookDTO>> updateBook(@RequestBody BookEntity bookEntity) {
+    public ResponseEntity<List<BookDTO>> updateBook(@RequestBody @Valid BookEntity bookEntity) {
 
         return ResponseEntity
                 .ok()

@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import jakarta.validation.Valid;
 import java.util.List;
 
 @Service
@@ -38,7 +39,7 @@ public class BookServiceImpl implements BookService {
     }
 
     @Transactional(readOnly = false)
-    public List<BookDTO> createBook(BookEntity bookEntity) {
+    public List<BookDTO> createBook(@Valid BookEntity bookEntity) {
 
         if (bookRepository.existsById(bookEntity.getId())) {
             throw new BookAlreadyExistsException("Livro já existe com o ID: " + bookEntity.getId() + ".");
@@ -54,7 +55,7 @@ public class BookServiceImpl implements BookService {
     }
 
     @Transactional(readOnly = false)
-    public List<BookDTO> updateBook(BookEntity bookEntity) {
+    public List<BookDTO> updateBook(@Valid BookEntity bookEntity) {
 
         if (!bookRepository.existsById(bookEntity.getId())) {
             throw new BookNotFoundException("Livro não encontrado com o ID: " + bookEntity.getId() + ".");
