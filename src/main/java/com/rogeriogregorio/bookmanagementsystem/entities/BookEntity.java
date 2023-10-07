@@ -5,7 +5,6 @@ import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
-import org.hibernate.mapping.Value;
 
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public class BookEntity {
     private String title;
 
     @NotBlank(message = "O autor não pode estar em branco")
-    @Pattern(regexp = "^[a-zA-Z\\s]+$", message = "O autor deve conter apenas letras e espaços")
+    @Pattern(regexp = "^[a-zA-Z\\s.]+$", message = "O autor deve conter apenas letras e espaços")
     @Column(name = "author")
     private String author;
 

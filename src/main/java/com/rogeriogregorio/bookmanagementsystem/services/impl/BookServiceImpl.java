@@ -18,6 +18,10 @@ public class BookServiceImpl implements BookService {
     @Autowired
     BookRepository bookRepository;
 
+    public BookServiceImpl(BookRepository bookRepository) {
+        this.bookRepository = bookRepository;
+    }
+
     @Transactional(readOnly = true)
     public List<BookDTO> findAllBooks() {
 
