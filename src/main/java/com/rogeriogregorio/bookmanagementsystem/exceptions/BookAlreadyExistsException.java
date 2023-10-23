@@ -6,4 +6,3 @@ public class BookAlreadyExistsException extends RuntimeException {
         super(message);
     }
 }
-
