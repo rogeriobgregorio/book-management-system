@@ -14,7 +14,7 @@ public class BookDTO {
     private String title;
 
     @NotBlank(message = "O autor não pode estar em branco")
-    @Pattern(regexp = "^[a-zA-Z\\s]+$", message = "O autor deve conter apenas letras")
+    @Pattern(regexp = "^[a-zA-Z\\s.]+$", message = "O autor deve conter apenas letras e espaços")
     private String author;
 
     @NotBlank(message = "A descrição não pode estar em branco")

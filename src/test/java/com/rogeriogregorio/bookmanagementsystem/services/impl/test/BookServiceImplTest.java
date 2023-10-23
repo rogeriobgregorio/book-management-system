@@ -30,7 +30,6 @@ class BookServiceImplTest {
 
     @BeforeEach
     void setUp() {
-
         MockitoAnnotations.openMocks(this);
         bookService = new BookServiceImpl(bookRepository);
     }
@@ -40,11 +39,12 @@ class BookServiceImplTest {
     void testFindAllBooks() {
         List<BookEntity> bookEntities = new ArrayList<>();
         bookEntities.add(new BookEntity("Title 1", "Author 1", "Description 1", 10.0));
+
         when(bookRepository.findAll()).thenReturn(bookEntities);
 
-        List<BookDTO> bookDTOs = bookService.findAllBooks();
+        List<BookDTO> bookDTOS = bookService.findAllBooks();
 
-        assertEquals(1, bookDTOs.size());
+        assertEquals(1, bookDTOS.size());
     }
 
     @Test
@@ -60,6 +60,7 @@ class BookServiceImplTest {
     void testFindBookById() {
         Long id = 1L;
         BookEntity bookEntity = new BookEntity("Title 1", "Author 1", "Description 1", 10.0);
+
         when(bookRepository.findById(id)).thenReturn(Optional.of(bookEntity));
 
         BookDTO bookDTO = bookService.findBookById(id);
@@ -81,7 +82,6 @@ class BookServiceImplTest {
         List<BookEntity> bookEntities = Collections.singletonList(bookEntity);
 
         when(bookRepository.findAll()).thenReturn(bookEntities);
-
         when(bookRepository.save(any(BookEntity.class))).thenReturn(bookEntity);
 
         List<BookDTO> createdBooks = bookService.createBook(bookEntity);
@@ -106,7 +106,6 @@ class BookServiceImplTest {
         List<BookEntity> bookEntities = Collections.singletonList(bookEntity);
 
         when(bookRepository.findAll()).thenReturn(bookEntities);
-
         when(bookRepository.save(any(BookEntity.class))).thenReturn(bookEntity);
 
         List<BookDTO> createdBooks = bookService.createBook(bookEntity);
@@ -163,9 +162,9 @@ class BookServiceImplTest {
 
         when(bookRepository.findByTitleOrAuthor("%" + searchTerm + "%")).thenReturn(bookEntities);
 
-        List<BookDTO> bookDTOs = bookService.findBookByTitleOrAuthor(searchTerm);
+        List<BookDTO> bookDTOS = bookService.findBookByTitleOrAuthor(searchTerm);
 
-        assertEquals(2, bookDTOs.size());
+        assertEquals(2, bookDTOS.size());
     }
 }
 

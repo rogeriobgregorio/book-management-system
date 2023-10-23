@@ -45,10 +45,6 @@ public class BookServiceImpl implements BookService {
     @Transactional(readOnly = false)
     public List<BookDTO> createBook(@Valid BookEntity bookEntity) {
 
-        if (bookRepository.existsById(bookEntity.getId())) {
-            throw new BookAlreadyExistsException("Livro já existe com o ID: " + bookEntity.getId() + ".");
-        }
-
         try {
             bookRepository.save(bookEntity);
         } catch (Exception e) {

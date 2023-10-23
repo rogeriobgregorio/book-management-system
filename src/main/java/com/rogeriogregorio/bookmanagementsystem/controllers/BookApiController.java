@@ -3,21 +3,21 @@ package com.rogeriogregorio.bookmanagementsystem.controllers;
 import com.rogeriogregorio.bookmanagementsystem.dto.BookDTO;
 import com.rogeriogregorio.bookmanagementsystem.entities.BookEntity;
 import com.rogeriogregorio.bookmanagementsystem.services.BookService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import jakarta.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/books")
-public class BookController {
+@RequestMapping(value = "/api")
+public class BookApiController {
 
     @Autowired
     private BookService bookService;
 
-    @GetMapping
+    @GetMapping(value = "/books")
     public ResponseEntity<List<BookDTO>> findAllBooks() {
 
         return ResponseEntity
@@ -25,7 +25,7 @@ public class BookController {
                 .body(bookService.findAllBooks());
     }
 
-    @GetMapping(value = "/{id}")
+    @GetMapping(value = "/books/{id}")
     public ResponseEntity<BookDTO> findBookById(@PathVariable Long id) {
 
         return ResponseEntity
@@ -33,15 +33,15 @@ public class BookController {
                 .body(bookService.findBookById(id));
     }
 
-    @PostMapping
+    @PostMapping(value = "/books")
     public ResponseEntity<List<BookDTO>> createBook(@RequestBody @Valid BookEntity bookEntity) {
-
+        bookEntity.setId(null);
         return ResponseEntity
                 .ok()
                 .body(bookService.createBook(bookEntity));
     }
 
-    @PutMapping
+    @PutMapping(value = "/books")
     public ResponseEntity<List<BookDTO>> updateBook(@RequestBody @Valid BookEntity bookEntity) {
 
         return ResponseEntity
@@ -49,7 +49,7 @@ public class BookController {
                 .body(bookService.updateBook(bookEntity));
     }
 
-    @DeleteMapping(value = "/{id}")
+    @DeleteMapping(value = "books/{id}")
     public ResponseEntity<List<BookDTO>> deleteBook(@PathVariable Long id) {
 
         return ResponseEntity
@@ -57,7 +57,7 @@ public class BookController {
                 .body(bookService.deleteBook(id));
     }
 
-    @GetMapping(value = "/search")
+    @GetMapping(value = "books/search")
     public ResponseEntity<List<BookDTO>> findBookByTitleOrAuthor(@RequestParam String titleOrAuthor) {
 
         return ResponseEntity
