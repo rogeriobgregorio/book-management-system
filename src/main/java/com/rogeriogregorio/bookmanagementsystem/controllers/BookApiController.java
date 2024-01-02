@@ -24,7 +24,7 @@ public class BookApiController {
     @Autowired
     private BookService bookService;
 
-    @Operation(description = "Buscar todos os livros")
+    @Operation(summary = "Buscar todos", description = "Endpoint para buscar todos os livros")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Busca realizada com sucesso",
                     content = @Content(mediaType = "application/json",
@@ -41,7 +41,7 @@ public class BookApiController {
                 .body(bookService.findAllBooks());
     }
 
-    @Operation(description = "Buscar livro pelo Id")
+    @Operation(summary = "Buscar por Id",description = "Endpoint para buscar livro pelo Id")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Busca realizada com sucesso",
                     content = @Content(mediaType = "application/json",
@@ -58,7 +58,7 @@ public class BookApiController {
                 .body(bookService.findBookById(id));
     }
 
-    @Operation(description = "Criar livro")
+    @Operation(summary = "Salvar", description = "Endpoint para criar um novo livro")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Livro criado com sucesso",
                     content = @Content(mediaType = "application/json",
@@ -74,7 +74,7 @@ public class BookApiController {
                 .body(bookService.createBook(bookEntity));
     }
 
-    @Operation(description = "Editar livro")
+    @Operation(summary = "Atualizar", description = "Endpoint para editar livro")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Livro editado com sucesso",
                     content = @Content(mediaType = "application/json",
@@ -91,7 +91,7 @@ public class BookApiController {
                 .body(bookService.updateBook(bookEntity));
     }
 
-    @Operation(description = "Deletar livro")
+    @Operation(summary = "Deletar", description = "Endpoint para deletar livro")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Livro deletado com sucesso",
                     content = @Content(mediaType = "application/json",
@@ -107,7 +107,7 @@ public class BookApiController {
                 .body(bookService.deleteBook(id));
     }
 
-    @Operation(description = "Buscar livro pelo título ou autor")
+    @Operation(summary = "Buscar por título ou autor", description = "Endpoint para buscar livro pelo título ou autor")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Busca realizada com sucesso",
                     content = @Content(mediaType = "application/json",

@@ -36,7 +36,7 @@ public class AuthenticationController {
     @Autowired
     TokenService tokenService;
 
-    @Operation(description = "Autenticar usuário")
+    @Operation(summary = "Autenticar", description = "Endpoint para autenticar usuário")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Login realizado com sucesso",
                     content = @Content(mediaType = "application/json", schema = @Schema(implementation = LoginResponseDTO.class))),
@@ -57,7 +57,7 @@ public class AuthenticationController {
         return ResponseEntity.ok(new LoginResponseDTO(token));
     }
 
-    @Operation(description = "Registrar usuário")
+    @Operation(summary = "Registrar", description = "Endpoint para registrar usuário")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Registro realizado com sucesso"),
             @ApiResponse(responseCode = "400", description = "Usuário já existente"),
