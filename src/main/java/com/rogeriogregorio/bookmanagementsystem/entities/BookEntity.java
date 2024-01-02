@@ -22,7 +22,7 @@ public class BookEntity {
     private String title;
 
     @NotBlank(message = "O autor não pode estar em branco")
-    @Pattern(regexp = "^[a-zA-Z\\s.]+$", message = "O autor deve conter apenas letras e espaços")
+    @Pattern(regexp = "^[\\p{L}\\s.]+$", message = "O autor deve conter apenas letras e espaços")
     @Column(name = "author")
     private String author;
 

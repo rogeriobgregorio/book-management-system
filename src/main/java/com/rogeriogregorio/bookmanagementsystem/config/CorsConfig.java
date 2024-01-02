@@ -2,18 +2,25 @@ package com.rogeriogregorio.bookmanagementsystem.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-@EnableWebMvc
-public class CorsConfig implements WebMvcConfigurer {
+public class CorsConfig implements WebMvcConfigurer{
 
-    public void addCorsMappings(CorsRegistry corsRegistry) {
-
-        corsRegistry.addMapping("/**")
-                .allowedOrigins("*")
-                .allowedHeaders("*")
-                .allowedMethods("GET", "PUT", "POST", "PATCH", "DELETE", "OPTIONS");
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry
+                .addMapping("/**")
+                .allowedOrigins("http://127.0.0.1:5500")
+                .allowedMethods(
+                        "GET", "POST", "PATCH",
+                        "PUT", "DELETE", "OPTIONS"
+                )
+                .allowedHeaders(
+                        "Origin", "Content-Type", "X-Auth-Token",
+                        "Authorization", "Cache-Control", "Content-Type",
+                        "Content-Length", "Host", "User-Agent", "Accept",
+                        "Accept-Encoding", "Connection"
+                );
     }
 }
