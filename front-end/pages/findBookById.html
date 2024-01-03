@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Livros por ID</title>
+    <link rel="stylesheet" type="text/css" href="../styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../styles/findBookById.css">
+    <script src="../scripts/findBookById.js"></script>
+</head>
+
+<body>
+
+    <h1>Listagem de Livros por ID</h1>
+    <label for="bookId">Digite o ID:</label>
+    <input type="text" id="bookId">
+    <button class="button" onclick="fetchBookById()">Buscar Livro</button>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+        <tbody id="bookTableBody"></tbody>
+    </table>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deletar Livro</title>
+    <link rel="stylesheet" type="text/css" href="../styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../styles/deleteBook.css">
+    <script src="../scripts/deleteBook.js"></script>
+</head>
+
+<body>
+
+    <h1>Deletar Livro</h1>
+    <label for="bookId">Digite o ID:</label>
+    <input type="text" id="bookId">
+    <button class="button" onclick="fetchDeleteBook()">Deletar Livro</button>
+
+    <div id="messagesBook">
+        <!-- Mensagens de erro serão exibidas aqui -->
+    </div>
+    
+</body>
+
+</html>

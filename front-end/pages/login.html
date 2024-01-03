@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="../styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../styles/login.css">
+    <script src="../scripts/login.js"></script>
+</head>
+
+<body>
+
+        <h1>Sistema de Gerenciamento de Livros</h1>
+    
+    <h2 id="formTitle">Login</h2>
+    <form id="loginForm">
+        <div id="messagesLogin">
+            <!-- Mensagens de erro serão exibidas aqui -->
+        </div>
+        <label for="login">Username:</label>
+        <input type="text" id="login" name="login" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <button type="submit">Entrar</button>
+    </form>
+
+    <form id="registerForm" style="display: none;">
+        <div id="messagesRegister">
+            <!-- Mensagens de sucesso e erro serão exibidas aqui -->
+        </div>
+        <label for="registerLogin">Username:</label>
+        <input type="text" id="registerLogin" name="login" required><br>
+
+        <label for="registerPassword">Password:</label>
+        <input type="password" id="registerPassword" name="password" required><br>
+
+        <label for="role">Role:</label>
+        <input type="text" id="role" name="role" required><br>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <h4 id="switchTitle">Não tem conta? Cadastre-se</h4>
+    <button id="toggleFormButton">Ir para Cadastro</button>
+
+</body>
+
+</html>
