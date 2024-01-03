@@ -8,3 +8,13 @@ INSERT INTO tb_books (title, author, description, price) VALUES ('Adventures of 
 INSERT INTO tb_books (title, author, description, price) VALUES ('One Hundred Years of Solitude', 'Gabriel Garcia Marquez', 'A multi-generational story of the Buendia family.', 11.25);
 INSERT INTO tb_books (title, author, description, price) VALUES ('War and Peace', 'Leo Tolstoy', 'An epic novel set during the Napoleonic era in Russia.', 16.50);
 INSERT INTO tb_books (title, author, description, price) VALUES ('Murder on the Orient Express', 'Agatha Christie', 'A famous detective investigates a murder on the Orient Express.', 13.49);
+INSERT INTO tb_books (title, author, description, price) VALUES ('The Catcher in the Rye', 'J.D. Salinger', 'The struggles of a teenager in New York City.', 15.99);
+INSERT INTO tb_books (title, author, description, price) VALUES ('The Hobbit', 'J.R.R. Tolkien', 'The prelude to The Lord of the Rings, featuring Bilbo Baggins.', 12.99);
+INSERT INTO tb_books (title, author, description, price) VALUES ('The Da Vinci Code', 'Dan Brown', 'A mystery thriller involving symbology and secret societies.', 18.75);
+INSERT INTO tb_books (title, author, description, price) VALUES ('The Alchemist', 'Paulo Coelho', 'A philosophical novel about pursuing one’s dreams.', 10.50);
+INSERT INTO tb_books (title, author, description, price) VALUES ('Brave New World', 'Aldous Huxley', 'A futuristic society where people are engineered for specific roles.', 14.25);
+INSERT INTO tb_books (title, author, description, price) VALUES ('The Hunger Games', 'Suzanne Collins', 'A dystopian trilogy where teenagers fight to the death for survival.', 22.99);
+INSERT INTO tb_books (title, author, description, price) VALUES ('Frankenstein', 'Mary Shelley', 'A gothic tale about a scientist and his monstrous creation.', 16.99);
+INSERT INTO tb_books (title, author, description, price) VALUES ('The Road', 'Cormac McCarthy', 'A post-apocalyptic journey of a father and son.', 20.49);
+INSERT INTO tb_books (title, author, description, price) VALUES ('The Girl with the Dragon Tattoo', 'Stieg Larsson', 'A gripping mystery involving a journalist and a computer hacker.', 19.99);
+INSERT INTO tb_books (title, author, description, price) VALUES ('The Chronicles of Narnia', 'C.S. Lewis', 'A series of fantasy novels exploring the magical land of Narnia.', 25.00);

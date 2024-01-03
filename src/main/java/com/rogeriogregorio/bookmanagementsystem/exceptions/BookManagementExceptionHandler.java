@@ -10,7 +10,7 @@ import java.time.Instant;
 @ControllerAdvice
 public class BookManagementExceptionHandler {
 
-    @ExceptionHandler(Exception.class)
+    @ExceptionHandler({Exception.class, IllegalArgumentException.class})
     public ResponseEntity<Object> genericError(Exception ex) {
 
         StandardError genericError = new StandardError();

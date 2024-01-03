@@ -87,6 +87,9 @@ public class BookServiceImpl implements BookService {
 
         String searchTerm = "%" + titleOrAuthor + "%";
 
+        if (bookRepository.findByTitleOrAuthor(searchTerm).isEmpty()){
+            throw new BookNotFoundException("Nenhum livro encontrado.");
+        }
         return bookRepository.findByTitleOrAuthor(searchTerm)
                 .stream()
                 .map(BookDTO::new)
