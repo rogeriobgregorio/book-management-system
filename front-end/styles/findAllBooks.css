@@ -1,5 +1,8 @@
 body {
     font-family: Helvetica, Arial, sans-serif;
+    background: url(../images/buscar2.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
     background-color: #1e1e24;
     color: #d8c3a5;
     margin: 0;
@@ -14,15 +17,18 @@ body {
 h1 {
     font-size: 36px;
     margin-top: 20px;
+    margin-bottom: 0px;
+    text-shadow: 2px 2px 4px black;
 }
 
 .table-container {
-    width: 100%;  
-    max-width: 800px;
+    width: 100%;
+    max-width: 840px;
     margin-top: 20px;
     padding-right: 5px;
-    max-height: 612px;
+    max-height: 576px;
     overflow: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .scrollable-table {
@@ -72,16 +78,53 @@ th {
 }
 
 .table-container::-webkit-scrollbar-thumb {
-    background-color: #4f3d36;
+    background-color: #d8c3a5;
     border-radius: 5px;
 }
 
 .table-container::-webkit-scrollbar-thumb:active {
-    background-color: #725e54;
+    background-color: #c2af93;
 }
 
 .table-container::-webkit-scrollbar-track {
     background-color: #1e1e24;
-    border: 6px solid #d8c3a5;
+    border: 6px solid #4f3d36;
     border-radius: 5px;
+}
+
+#menu {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 840px;
+    margin-top: 90px;
+    padding: 0px;
+    background-color: #4f3d36;
+    border: 2px solid #d8c3a5;
+    border-radius: 5px;
+}
+
+.button {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #b0a698;
+    color: #1e1e24;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #d8c3a5;
+}
+
+.button:active {
+    background-color: #b0a698;
+}
+
+#messagesBook {
+    text-shadow: 2px 2px 4px black;
 }

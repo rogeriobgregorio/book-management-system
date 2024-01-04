@@ -1,5 +1,8 @@
 body {
     font-family: Helvetica, Arial, sans-serif;
+    background: url(../images/index2.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
     background-color: #1e1e24;
     color: #d8c3a5;
     margin: 0;
@@ -7,8 +10,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 65vh;
+    justify-content: flex-start;
+    height: 100vh;
 }
 
 .button {
@@ -22,6 +25,7 @@ body {
     border-radius: 5px;
     display: block;
     margin: 10px auto;
+    cursor: pointer;
 }
 
 .button:hover {
@@ -34,7 +38,8 @@ body {
 
 h1 {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 90px;
+    text-shadow: 2px 2px 4px black;
 }
 
 div {
@@ -46,4 +51,8 @@ div {
     background-color: #4f3d36;
     border: 2px solid #d8c3a5;
     border-radius: 5px;
+}
+
+#messagesBook {
+    text-shadow: 2px 2px 4px black;
 }

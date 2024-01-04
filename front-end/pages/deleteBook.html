@@ -13,15 +13,25 @@
 
 <body>
 
+    <div id="menu">
+        <a class="button" href="http://127.0.0.1:5500/bookmanagementsystem/pages/index.html">Tela Inicial</a>
+        <a class="button" href="http://127.0.0.1:5500/bookmanagementsystem/pages/findAllBooks.html">Buscar Todos</a>
+        <a class="button" href="http://127.0.0.1:5500/bookmanagementsystem/pages/findBookById.html">Buscar por ID</a>
+        <a class="button" href="http://127.0.0.1:5500/bookmanagementsystem/pages/findBookByTitleOrAuthor.html">Buscar por Título ou Autor</a>
+        <a class="button" href="http://127.0.0.1:5500/bookmanagementsystem/pages/createBook.html">Criar Livro</a>
+        <a class="button" href="http://127.0.0.1:5500/bookmanagementsystem/pages/updateBook.html">Atualizar Livro</a>
+    </div>
+
     <h1>Deletar Livro</h1>
     <label for="bookId">Digite o ID:</label>
+    <div id="inputButton">
     <input type="text" id="bookId">
     <button class="button" onclick="fetchDeleteBook()">Deletar Livro</button>
-
+    </div>
     <div id="messagesBook">
         <!-- Mensagens de erro serão exibidas aqui -->
     </div>
-    
+
 </body>
 
 </html>

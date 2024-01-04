@@ -13,10 +13,23 @@
 
 <body>
 
+    <div id="menu">
+        <a class="button" href="http://127.0.0.1:5500/bookmanagementsystem/pages/index.html">Tela Inicial</a>
+        <a class="button" href="http://127.0.0.1:5500/bookmanagementsystem/pages/findAllBooks.html">Buscar Todos</a>
+        <a class="button" href="http://127.0.0.1:5500/bookmanagementsystem/pages/findBookById.html">Buscar por ID</a>
+        <a class="button" href="http://127.0.0.1:5500/bookmanagementsystem/pages/findBookByTitleOrAuthor.html">Buscar
+            por Título ou Autor</a>
+        <a class="button" href="http://127.0.0.1:5500/bookmanagementsystem/pages/createBook.html">Criar Livro</a>
+        <a class="button" href="http://127.0.0.1:5500/bookmanagementsystem/pages/deleteBook.html">Deletar Livro</a>
+    </div>
+
     <h1>Atualizar Livro</h1>
     <label for="bookId">Digite o ID:</label>
-    <input type="text" id="bookId">
-    <button class="buttonFind" onclick="fetchBookById()">Buscar Livro</button>
+    <div id="inputButton">
+        <input type="text" id="bookId">
+        <button class="buttonFind" onclick="fetchBookById()">Buscar Livro</button>
+    </div>
+
     <table>
         <thead>
             <tr>
@@ -31,30 +44,30 @@
     </table>
 
     <br>
-    
+
     <form id="bookForm">
-    
+
         <div id="messagesBook">
             <!-- Mensagens de erro serão exibidas aqui -->
         </div>
 
         <label for="id">ID:</label>
         <input type="text" id="id" name="id" required><br>
-    
+
         <label for="title">Título:</label>
         <input type="text" id="title" name="title" required><br>
-    
+
         <label for="author">Autor:</label>
         <input type="text" id="author" name="author" required><br>
-    
+
         <label for="description">Descrição:</label>
         <input type="text" id="description" name="description" required><br>
-    
+
         <label for="price">Preço:</label>
         <input type="text" id="price" name="price" required><br>
-    
+
         <button class="buttonUpdate" type="submit">Atualizar</button>
-    
+
     </form>
 
 </body>
