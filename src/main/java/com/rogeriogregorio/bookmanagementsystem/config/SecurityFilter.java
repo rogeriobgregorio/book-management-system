@@ -19,10 +19,15 @@ import java.io.IOException;
 public class SecurityFilter extends OncePerRequestFilter {
 
     @Autowired
-    TokenService tokenService;
+    private TokenService tokenService;
 
     @Autowired
-    UserRepository userRepository;
+    private UserRepository userRepository;
+
+    public SecurityFilter(TokenService tokenService, UserRepository userRepository) {
+        this.tokenService = tokenService;
+        this.userRepository = userRepository;
+    }
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
@@ -46,9 +51,4 @@ public class SecurityFilter extends OncePerRequestFilter {
         if(authHeader == null) return null;
         return authHeader.replace("Bearer ", "");
     }
-
-    //httpResponse.addHeader("Access-Control-Allow-Origin", "*");
-    //        httpResponse.addHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-    //        httpResponse.addHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-    //        httpResponse.addHeader("Access-Control-Allow-Credentials", "true");
 }

@@ -3,6 +3,16 @@ function getToken() {
     return localStorage.getItem('token');
 }
 
+// Função para exibir mensagens de livro
+const showMessageBook = (message, isSuccess = true) => {
+    const messageElement = document.createElement("p");
+    messageElement.textContent = message;
+    messageElement.style.color = isSuccess ? "green" : "red";
+    const messagesContainerBook = document.getElementById("messagesBook");
+    messagesContainerBook.innerHTML = "";
+    messagesContainerBook.appendChild(messageElement);
+};
+
 // Função para buscar livro por ID
 async function fetchBookById() {
     const bookId = document.getElementById('bookId').value;
@@ -38,9 +48,16 @@ async function fetchBookById() {
                             <td>${data.price}</td>
                         `;
                 tableBody.appendChild(row);
+
+                showMessageBook('Livro encontrado', true);
             } else {
                 console.log('Livro não encontrado');
             }
+        } else if (response.status === 404) {
+            console.log('Livro não encontrado');
+            showMessageBook('Livro não encontrado', false);
+            const tableBody = document.getElementById('bookTableBody');
+            tableBody.innerHTML = '';
         } else {
             console.error('Erro ao buscar livro:', response.status);
         }

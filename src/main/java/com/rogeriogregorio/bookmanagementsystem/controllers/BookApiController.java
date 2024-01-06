@@ -24,6 +24,10 @@ public class BookApiController {
     @Autowired
     private BookService bookService;
 
+    public BookApiController(BookService bookService) {
+        this.bookService = bookService;
+    }
+
     @Operation(summary = "Buscar todos", description = "Endpoint para buscar todos os livros")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Busca realizada com sucesso",

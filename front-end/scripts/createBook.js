@@ -32,6 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
             if (response.status === 200) {
                 console.log("Cadastro bem-sucedido");
                 showMessageBook("Cadastro bem-sucedido", true);
+            } else if (response.status === 403) {
+                console.log('Não autorizado');
+                showMessageBook('Não autorizado', false);
             } else {
                 console.error("Erro no cadastro");
                 showMessageBook("Erro no cadastro", false);

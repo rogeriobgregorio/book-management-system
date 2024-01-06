@@ -34,7 +34,13 @@ public class AuthenticationController {
     private UserRepository userRepository;
 
     @Autowired
-    TokenService tokenService;
+    private TokenService tokenService;
+
+    public AuthenticationController(AuthenticationManager authenticationManager, UserRepository userRepository, TokenService tokenService) {
+        this.authenticationManager = authenticationManager;
+        this.userRepository = userRepository;
+        this.tokenService = tokenService;
+    }
 
     @Operation(summary = "Autenticar", description = "Endpoint para autenticar usuário")
     @ApiResponses(value = {

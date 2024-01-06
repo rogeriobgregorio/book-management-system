@@ -38,6 +38,9 @@ async function fetchDeleteBook() {
         } else if (response.status === 404) {
             console.log('Livro não encontrado');
             showMessageBook('Livro não encontrado', false);
+        } else if (response.status === 403) {
+            console.log('Não autorizado');
+            showMessageBook('Não autorizado', false);
         } else {
             console.error('Erro ao deletar livro:', response.status);
             showMessageBook('Erro ao deletar livro', false);

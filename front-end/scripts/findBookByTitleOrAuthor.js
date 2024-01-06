@@ -3,6 +3,16 @@ function getToken() {
     return localStorage.getItem('token');
 }
 
+// Função para exibir mensagens de livro
+const showMessageBook = (message, isSuccess = true) => {
+    const messageElement = document.createElement("p");
+    messageElement.textContent = message;
+    messageElement.style.color = isSuccess ? "green" : "red";
+    const messagesContainerBook = document.getElementById("messagesBook");
+    messagesContainerBook.innerHTML = "";
+    messagesContainerBook.appendChild(messageElement);
+};
+
 // Função para buscar livros por título ou autor
 async function fetchBooks() {
     const searchTerm = document.getElementById('searchTerm').value;
@@ -39,10 +49,17 @@ async function fetchBooks() {
                         <td>${book.price}</td>
                     `;
                     tableBody.appendChild(row);
+
+                    showMessageBook('Livro(s) encontrado(s)', true);
                 });
             } else {
                 console.log('Nenhum livro encontrado');
             }
+        } else if (response.status === 404) {
+            console.log('Livro não encontrado');
+            showMessageBook('Livro(s) não encontrado(s)', false);
+            const tableBody = document.getElementById('bookTableBody');
+            tableBody.innerHTML = '';
         } else {
             console.error('Erro ao buscar livros:', response.status);
         }

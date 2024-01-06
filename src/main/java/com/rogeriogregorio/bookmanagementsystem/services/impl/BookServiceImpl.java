@@ -16,7 +16,7 @@ import java.util.List;
 public class BookServiceImpl implements BookService {
 
     @Autowired
-    BookRepository bookRepository;
+    private BookRepository bookRepository;
 
     public BookServiceImpl(BookRepository bookRepository) {
         this.bookRepository = bookRepository;

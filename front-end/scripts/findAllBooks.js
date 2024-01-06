@@ -3,6 +3,16 @@ function getToken() {
     return localStorage.getItem('token');
 }
 
+// Função para exibir mensagens de livro
+const showMessageBook = (message, isSuccess = true) => {
+    const messageElement = document.createElement("p");
+    messageElement.textContent = message;
+    messageElement.style.color = isSuccess ? "green" : "red";
+    const messagesContainerBook = document.getElementById("messagesBook");
+    messagesContainerBook.innerHTML = "";
+    messagesContainerBook.appendChild(messageElement);
+};
+
 // Função para fazer a requisição para o endpoint findAllBooks
 async function fetchBooks() {
     const token = getToken();
@@ -37,10 +47,15 @@ async function fetchBooks() {
                         <td>${book.price}</td>
                     `;
                     tableBody.appendChild(row);
+
+                    showMessageBook('Livro(s) encontrado(s)', true);
                 });
             } else {
                 console.log('Nenhum livro encontrado');
             }
+        } else if (response.status === 404) {
+            console.log('Livro não encontrado');
+            showMessageBook('Livro(s) não encontrad(o)', false); 
         } else {
             console.error('Erro ao buscar livros:', response.status);
         }

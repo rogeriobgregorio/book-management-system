@@ -119,11 +119,11 @@ label {
 input {
     width: 93%;
     padding: 10px;
-    margin: 0px 0px 0px 0px;
     border: 1px solid #555;
     border-radius: 5px;
     background-color: #1e1e1e;
     color: #f5f5f5;
+    margin: auto;
 }
 
 #bookId {
@@ -137,7 +137,6 @@ input {
     border-radius: 5px;
     display: block;
     width: 100px;
-    margin-top: 0px;
 }
 
 #inputButton {
@@ -150,7 +149,7 @@ input {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: center;
     width: 840px;
-    margin-top: 90px;
+    margin-top: 20px;
     padding: 0px;
     background-color: #4f3d36;
     border: 2px solid #d8c3a5;
@@ -177,6 +176,16 @@ input {
 
 .button:active {
     background-color: #b0a698;
+}
+
+#messagesBookId {
+    text-shadow: 2px 2px 4px black;
+    background-color: #4f3d36;
+    border: 2px solid #d8c3a5;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 240px;
 }
 
 #messagesBook {

@@ -104,7 +104,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const registerData = {
             login: document.getElementById("registerLogin").value,
             password: document.getElementById("registerPassword").value,
-            role: document.getElementById("role").value,
         };
 
         register(registerData);

@@ -3,3 +3,8 @@ function getToken() {
 }
 
 console.log(getToken)
+
+function logout() {
+    localStorage.removeItem('token');
+    window.location.href = 'http://127.0.0.1:5500/bookmanagementsystem/pages/login.html';
+}
