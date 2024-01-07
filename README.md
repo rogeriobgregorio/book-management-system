@@ -1,5 +1,7 @@
 
 # Book Management System - API Rest
+[![Status](https://img.shields.io/badge/Status-Concluído-brightgreen.svg)](https://github.com/seu-usuario/seu-projeto)
+
 ## Descrição
 Book Management System é uma aplicação Web, que consiste em uma API Rest feita com Java e Spring, e uma interface com HTML, CSS e Javascipt. O sistema é robusto e eficiente para o gerenciamento completo de livros. Construido com boas práticas de programação, inclui autenticação segura com Spring Security e JWT, operações CRUD, testes unitários com JUnit e Mockito, e documentação interativa com Swagger.
 
