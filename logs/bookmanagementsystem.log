@@ -1,0 +1,36 @@
+2024-01-08T00:30:41,242 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-01-08T00:30:41,278 INFO  com.rogeriogregorio.bookmanagementsystem.BookManagementSystemApplication - Starting BookManagementSystemApplication using Java 17.0.9 with PID 116589 (/home/rogerio/projetos/book-management-system/target/classes started by rogerio in /home/rogerio/projetos/book-management-system)
+2024-01-08T00:30:41,280 DEBUG com.rogeriogregorio.bookmanagementsystem.BookManagementSystemApplication - Running with Spring Boot v3.1.2, Spring v6.0.11
+2024-01-08T00:30:41,281 INFO  com.rogeriogregorio.bookmanagementsystem.BookManagementSystemApplication - The following 1 profile is active: "test"
+2024-01-08T00:30:41,331 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-01-08T00:30:41,332 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-01-08T00:30:41,920 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-08T00:30:41,968 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 41 ms. Found 2 JPA repository interfaces.
+2024-01-08T00:30:42,398 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-01-08T00:30:42,405 INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-01-08T00:30:42,406 INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-01-08T00:30:42,407 INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-01-08T00:30:42,461 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-01-08T00:30:42,463 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1130 ms
+2024-01-08T00:30:42,551 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-01-08T00:30:42,671 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-01-08T00:30:42,672 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-01-08T00:30:42,701 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-08T00:30:42,730 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-01-08T00:30:42,732 INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2024-01-08T00:30:42,807 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2024-01-08T00:30:42,885 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-08T00:30:43,031 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2024-01-08T00:30:43,426 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-08T00:30:43,462 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-08T00:30:43,689 DEBUG com.rogeriogregorio.bookmanagementsystem.config.SecurityFilter - Filter 'securityFilter' configured for use
+2024-01-08T00:30:43,988 INFO  org.springframework.data.jpa.repository.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-01-08T00:30:44,264 INFO  org.springframework.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@e7a5039, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1078b2da, org.springframework.security.web.context.SecurityContextHolderFilter@60fcf00f, org.springframework.security.web.header.HeaderWriterFilter@3fc635f7, org.springframework.web.filter.CorsFilter@389deb08, org.springframework.security.web.authentication.logout.LogoutFilter@64b8a9e1, com.rogeriogregorio.bookmanagementsystem.config.SecurityFilter@1031ce60, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@22c0f45c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5033557, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f41587e, org.springframework.security.web.session.SessionManagementFilter@25d71ef8, org.springframework.security.web.access.ExceptionTranslationFilter@7139486b, org.springframework.security.web.access.intercept.AuthorizationFilter@2d267743]
+2024-01-08T00:30:44,427 INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-01-08T00:30:44,437 INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-01-08T00:30:44,448 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-08T00:30:44,458 INFO  com.rogeriogregorio.bookmanagementsystem.BookManagementSystemApplication - Started BookManagementSystemApplication in 3.509 seconds (process running for 4.055)
+2024-01-08T00:34:50,987 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-08T00:34:51,383 WARN  org.springframework.beans.factory.support.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2024-01-08T00:34:51,384 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-01-08T00:34:51,493 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
