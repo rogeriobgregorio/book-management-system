@@ -49,6 +49,12 @@ https://youtu.be/Ghs7_J_VMt0?si=IdRPn4Lrdd-BNu11
 **Tela Deletar Livro**
 ![FindByTitleOrAuthor Screenshot](https://github.com/rogeriobgregorio/book-management-system/raw/main/screenshots/screenshotDeleteBook.png)
 
+## Modelo Conceitual
+
+**Diagrama de Classes**
+![DiagramaDeCLasses Screenshot](https://github.com/rogeriobgregorio/book-management-system/raw/main/screenshots/diagramaDeClasses.png)
+
+
 ## Documentação da API
 
 ### Autenticar Usuário
