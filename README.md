@@ -54,6 +54,9 @@ https://youtu.be/Ghs7_J_VMt0?si=IdRPn4Lrdd-BNu11
 **Diagrama de Classes**
 ![DiagramaDeCLasses Screenshot](https://github.com/rogeriobgregorio/book-management-system/raw/main/screenshots/diagramaDeClasses.png)
 
+**Diagrama de Casos de Uso**
+![DiagramaDeCasosDeUso Screenshot](https://github.com/rogeriobgregorio/book-management-system/raw/main/screenshots/diagramaDeCasosDeUso.png)
+
 
 ## Documentação da API
 
