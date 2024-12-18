@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     console.log("Token armazenado no localStorage");
 
                     // Redirecionar para a página index.html após o login bem-sucedido
-                    window.location.href = "http://127.0.0.1:5500/bookmanagementsystem/pages/index.html";
+                    window.location.href = "http://127.0.0.1:5500/front-end/pages/index.html";
                 }
             } else {
                 console.error("Erro no login");

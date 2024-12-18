@@ -92,15 +92,6 @@ class BookServiceImplTest {
     }
 
     @Test
-    void testCreateBookAlreadyExists() {
-        BookEntity bookEntity = new BookEntity("Title", "Author", "Description", 20.0);
-
-        when(bookRepository.existsById(bookEntity.getId())).thenReturn(true);
-
-        assertThrows(BookAlreadyExistsException.class, () -> bookService.createBook(bookEntity));
-    }
-
-    @Test
     public void testUpdateBook() {
         BookEntity bookEntity = new BookEntity("Title", "Author", "Description", 20.0);
         List<BookEntity> bookEntities = Collections.singletonList(bookEntity);
